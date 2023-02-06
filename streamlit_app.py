@@ -9,7 +9,7 @@ my_cur.execute("select * from fruit_load_list")
 my_data_row = my_cur.fetchone()
 streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_row)
-my_data_rows = my_cur.fetchALL()
+my_data_rows = my_cur.fetchall()
 streamlit.dataframe(my_data_rows)
 
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
