@@ -24,8 +24,7 @@ streamlit.text('Hard-Boiled Free-Range Egg')
 
 streamlit.header('Fruityvice Fruit Advice!')
 import requests
-fruityvice_response= requests.get("https://fruityvice.com/api/fruit/watermelon").json()
-streamlit.text(fruityvice_response)
+fruityvice_response= requests.get("https://fruityvice.com/api/fruit/" + "kiwi").json()
 
 fruityvice_normalized = pandas.json_normalize(fruityvice_response)
 streamlit.dataframe(fruityvice_normalized)
